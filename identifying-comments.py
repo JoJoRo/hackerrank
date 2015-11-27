@@ -1,17 +1,16 @@
 #!/usr/bin/env python3
 
 # Identifying comments on ide
-# http://pythex.org/
+# Use http://pythex.org/
 import sys
 import re
 
 pattern = '(/\*(?:.|\n)*?\*/)|(//.*)'
-
 comment = re.compile(pattern)
 
 s = ''
 for line in sys.stdin:
-    s += line
+	s += line
 
 words = comment.findall(s)
 
